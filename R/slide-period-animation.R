@@ -121,7 +121,10 @@ plot <- ggplot() +
       group = group
     ),
     data = period_data,
-    color = "#DCDCDC"
+    color = "#DCDCDC",
+    family = "Inconsolata",
+    fontface = "bold",
+    size = 4.25
   ) +
   geom_text(
     mapping = aes(

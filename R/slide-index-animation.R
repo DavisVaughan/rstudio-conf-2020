@@ -111,7 +111,10 @@ plot <- ggplot() +
       group = group
     ),
     data = df,
-    color = "#DCDCDC"
+    color = "#DCDCDC",
+    family = "Inconsolata",
+    fontface = "bold",
+    size = 4.5
   ) +
   geom_text(
     mapping = aes(
