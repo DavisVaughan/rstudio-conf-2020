@@ -8,7 +8,7 @@ library(magrittr)
 
 roll <- tibble(
   xmin = c(rep(1L, 3), 2:8),
-  xmax = 1:10,
+  xmax = c(1.5, 2:10),
   ymin = 1L,
   ymax = 3L,
   group = seq_along(xmin)
@@ -16,7 +16,7 @@ roll <- tibble(
 
 expand <- tibble(
   xmin = 1L,
-  xmax = 1:10,
+  xmax = c(1.5, 2:10),
   ymin = 5L,
   ymax = 7L,
   group = seq_along(xmin)
@@ -50,7 +50,7 @@ plot <- df %>%
 # - width/height should be 488x100, but to make the text clearer we 4x the resolution so we also
 #   4x the width/height. Then in Keynote we resize it back to 488x100
 # - fps = 5 to be slow enough to explain
-anim <- animate(plot, width = 488*2, height = 100*2, res = 72*2, pointsize = 14, type = "cairo", fps = 5)
+anim <- animate(plot, width = 488*2, height = 100*2, res = 72*2, pointsize = 14, type = "cairo", duration = 20)
 
 anim
 

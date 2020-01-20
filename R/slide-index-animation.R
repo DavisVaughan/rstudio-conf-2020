@@ -165,7 +165,7 @@ plot <- ggplot() +
   scale_color_manual(values = c(pink = "#FF4888", black = "black")) +
   transition_manual(group)
 
-anim <- animate(plot, width = 490*2, height = 163*2, res = 72*2, pointsize = 14, type = "cairo", fps = 5)
+anim <- animate(plot, width = 490*2, height = 163*2, res = 72*2, pointsize = 14, type = "cairo", duration = 20)
 
 anim
 
