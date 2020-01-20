@@ -30,7 +30,6 @@ plot <- df %>%
   theme(
     plot.background = element_rect(fill = "#DCDCDC", color = NA),
     panel.grid = element_blank(),
-    panel.grid.major.x = element_line(colour = "grey80"),
     axis.text.x = element_text(family = "Inconsolata", size = 14, colour = "black"),
     axis.text.y = element_text(family = "Inconsolata", size = 14, colour = "black")
   ) +
@@ -50,7 +49,8 @@ plot <- df %>%
 #   meaning that the plot background looks noticeably different
 # - width/height should be 488x100, but to make the text clearer we 4x the resolution so we also
 #   4x the width/height. Then in Keynote we resize it back to 488x100
-anim <- animate(plot, width = 488*4, height = 100*4, res = 72*4, pointsize = 14, type = "cairo")
+# - fps = 5 to be slow enough to explain
+anim <- animate(plot, width = 488*2, height = 100*2, res = 72*2, pointsize = 14, type = "cairo", fps = 5)
 
 anim
 
